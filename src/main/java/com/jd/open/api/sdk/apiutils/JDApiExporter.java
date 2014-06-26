@@ -151,6 +151,6 @@ public class JDApiExporter implements ApiExporter {
 
     public static void main(String[] args) {
         ApiExporter exporter = new JDApiExporter();
-        exporter.export("jd-open-api.json");
+        exporter.export(args > 0 ? args[0] : "jd-open-api.json");
     }
 }

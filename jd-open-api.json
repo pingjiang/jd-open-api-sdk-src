@@ -1,0 +1,4682 @@
+{
+	"api-suit-name": "jd-open-api-sdk",
+	"version": "2.0.0",
+	"provider": "http://help.jd.com/jos/question-594.html",
+	"api": {
+		"group": "address",
+		"name": "AreaCityGetRequest",
+		"method": "jingdong.area.city.get",
+		"request": {
+			"parentId": "Long"
+		}, 
+		"response": {
+			"cityAreas": [ "AreaListBeanVO[]" ], 
+			"success": "Boolean"
+		}
+	}, 
+	"api": {
+		"group": "address",
+		"name": "AreaCountyGetRequest",
+		"method": "jingdong.area.county.get",
+		"request": {
+			"parentId": "Long"
+		}, 
+		"response": {
+			"countyAreas": [ "AreaListBeanVO[]" ], 
+			"success": "Boolean"
+		}
+	}, 
+	"api": {
+		"group": "address",
+		"name": "AreaIpQueryRequest",
+		"method": "jingdong.area.ip.query",
+		"request": {
+			"ip": "String"
+		}, 
+		"response": {
+			"jipResponse": "IpLookupResponse"
+		}
+	}, 
+	"api": {
+		"group": "address",
+		"name": "AreaProvinceGetRequest",
+		"method": "jingdong.area.province.get",
+		"request": {
+		}, 
+		"response": {
+			"provinceAreas": [ "AreaListBeanVO[]" ], 
+			"success": "Boolean"
+		}
+	}, 
+	"api": {
+		"group": "address",
+		"name": "AreaTownGetRequest",
+		"method": "jingdong.area.town.get",
+		"request": {
+			"parentId": "Long"
+		}, 
+		"response": {
+			"townAreas": [ "AreaListBeanVO[]" ], 
+			"success": "Boolean"
+		}
+	}, 
+	"api": {
+		"group": "after",
+		"name": "AfterSearchRequest",
+		"method": "360buy.after.search",
+		"request": {
+			"queryFields": [ "List" ], 
+			"selectFields": "String", 
+			"page": "String", 
+			"pageSize": "String"
+		}, 
+		"response": {
+			"returnGoods": "ReturnGoods"
+		}
+	}, 
+	"api": {
+		"group": "after",
+		"name": "AfterStateUpdateRequest",
+		"method": "360buy.after.state.update",
+		"request": {
+			"returnId": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"returnId": "String"
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "BrandsGetRequest",
+		"method": "360buy.brands.get",
+		"request": {
+			"fields": "String"
+		}, 
+		"response": {
+			"brands": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "CategoryAttributeSearchRequest",
+		"method": "360buy.ware.get.attribute",
+		"request": {
+			"cid": "String", 
+			"isKeyProp": "String", 
+			"isSaleProp": "String", 
+			"aid": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"attributes": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "CategoryAttributeValueSearchRequest",
+		"method": "360buy.ware.get.attvalue",
+		"request": {
+			"avs": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"total": "int", 
+			"attValues": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "CategoryGroupSearchRequest",
+		"method": "360buy.ware.groups.get",
+		"request": {
+			"fields": "String", 
+			"cid": "String"
+		}, 
+		"response": {
+			"groups": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "CategorySearchRequest",
+		"method": "360buy.warecats.get",
+		"request": {
+			"fields": "String"
+		}, 
+		"response": {
+			"total": "int", 
+			"category": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "EccCategoryAddRequest",
+		"method": "jingdong.ecc.category.add",
+		"request": {
+			"parentCid": "Long", 
+			"cName": "String", 
+			"hasLeaf": "Integer", 
+			"lev": "Integer", 
+			"sortNumber": "Integer", 
+			"homeShow": "Integer"
+		}, 
+		"response": {
+			"categoryResult": "CategoryResult"
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "EccCategoryChildsListGetRequest",
+		"method": "jingdong.ecc.category.childs.list.get",
+		"request": {
+			"pid": "Long"
+		}, 
+		"response": {
+			"categorys": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "EccCategoryDeleteRequest",
+		"method": "jingdong.ecc.category.delete",
+		"request": {
+			"cid": "Long"
+		}, 
+		"response": {
+			"isSuccess": "boolean"
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "EccCategoryGetRequest",
+		"method": "jingdong.ecc.category.get",
+		"request": {
+			"cid": "Long"
+		}, 
+		"response": {
+			"categoryResult": "CategoryResult"
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "EccCategoryListGetRequest",
+		"method": "jingdong.ecc.category.list.get",
+		"request": {
+			"parentCid": "Long", 
+			"cid": "Long", 
+			"status": "Integer", 
+			"lev": "Integer"
+		}, 
+		"response": {
+			"categorys": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "EccCategoryParentsListGetRequest",
+		"method": "jingdong.ecc.category.parents.list.get",
+		"request": {
+			"cid": "Long"
+		}, 
+		"response": {
+			"categorys": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "category",
+		"name": "EccCategoryUpdateRequest",
+		"method": "jingdong.ecc.category.update",
+		"request": {
+			"parentCid": "Long", 
+			"cid": "Long", 
+			"cName": "String", 
+			"sortNumber": "Integer", 
+			"lev": "Integer", 
+			"homeShow": "Integer"
+		}, 
+		"response": {
+			"categoryResult": "CategoryResult"
+		}
+	}, 
+	"api": {
+		"group": "delivery",
+		"name": "DeliveryLogisticsGetRequest",
+		"method": "360buy.delivery.logistics.get",
+		"request": {
+			"optionalFields": "String"
+		}, 
+		"response": {
+			"logisticsCompanies": "LogisticsCompanies"
+		}
+	}, 
+	"api": {
+		"group": "delivery",
+		"name": "EtmsTraceGetRequest",
+		"method": "jingdong.etms.trace.get",
+		"request": {
+			"waybillCode": "String"
+		}, 
+		"response": {
+			"traceApiDtos": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "delivery",
+		"name": "EtmsWaybillcodeGetRequest",
+		"method": "jingdong.etms.waybillcode.get",
+		"request": {
+			"preNum": "String", 
+			"customerCode": "String"
+		}, 
+		"response": {
+			"resultInfo": "GetResultInfoDTO"
+		}
+	}, 
+	"api": {
+		"group": "delivery",
+		"name": "EtmsWaybillSendRequest",
+		"method": "jingdong.etms.waybill.send",
+		"request": {
+			"deliveryId": "String", 
+			"salePlat": "String", 
+			"customerCode": "String", 
+			"orderId": "String", 
+			"thrOrderId": "String", 
+			"selfPrintWayBill": "Integer", 
+			"pickMethod": "String", 
+			"packageRequired": "String", 
+			"senderName": "String", 
+			"senderAddress": "String", 
+			"senderTel": "String", 
+			"senderMobile": "String", 
+			"senderPostcode": "String", 
+			"receiveName": "String", 
+			"receiveAddress": "String", 
+			"province": "String", 
+			"city": "String", 
+			"county": "String", 
+			"town": "String", 
+			"provinceId": "Integer", 
+			"cityId": "Integer", 
+			"countyId": "Integer", 
+			"townId": "Integer", 
+			"siteType": "Integer", 
+			"siteId": "Integer", 
+			"siteName": "String", 
+			"receiveTel": "String", 
+			"receiveMobile": "String", 
+			"postcode": "String", 
+			"packageCount": "Integer", 
+			"weight": "Double", 
+			"vloumLong": "Double", 
+			"vloumWidth": "Double", 
+			"vloumHeight": "Double", 
+			"vloumn": "Double", 
+			"description": "String", 
+			"collectionValue": "Integer", 
+			"collectionMoney": "Double", 
+			"guaranteeValue": "Integer", 
+			"guaranteeValueAmount": "Double", 
+			"signReturn": "Integer", 
+			"aging": "Integer", 
+			"transType": "Integer", 
+			"extendField1": "String", 
+			"extendField2": "String", 
+			"extendField3": "String", 
+			"extendField4": "Integer", 
+			"extendField5": "Integer"
+		}, 
+		"response": {
+			"resultInfo": "SendResultInfoDTO"
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopChatlogFuzzyQueryRequest",
+		"method": "jingdong.im.pop.chatlog.fuzzy.query",
+		"request": {
+			"waiter": "String", 
+			"customer": "String", 
+			"keyWord": "String", 
+			"startTime": "Date", 
+			"endTime": "Date", 
+			"page": "int", 
+			"pageSize": "int"
+		}, 
+		"response": {
+			"ChatLog": "ChatLogPage"
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopChatlogGetRequest",
+		"method": "jingdong.im.pop.chatlog.get",
+		"request": {
+			"waiter": "String", 
+			"customer": "String", 
+			"skuId": "Long", 
+			"startTime": "Date", 
+			"endTime": "Date", 
+			"page": "int", 
+			"pageSize": "int"
+		}, 
+		"response": {
+			"ChatLog": "ChatLogPage"
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopConsultAvgwaittimeGetRequest",
+		"method": "jingdong.im.pop.consult.avgwaittime.get",
+		"request": {
+			"waiter": "String", 
+			"date": "Date"
+		}, 
+		"response": {
+			"avgTime": "Double"
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopEvaluationlistGetRequest",
+		"method": "jingdong.im.pop.evaluationlist.get",
+		"request": {
+			"waiter": "String", 
+			"startTime": "Date", 
+			"endTime": "Date", 
+			"page": "int", 
+			"pageSize": "int"
+		}, 
+		"response": {
+			"Evaluation": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopEvaluationstatGetRequest",
+		"method": "jingdong.im.pop.evaluationstat.get",
+		"request": {
+			"waiter": "String", 
+			"startTime": "Date", 
+			"endTime": "Date"
+		}, 
+		"response": {
+			"WaiterDailyEvaStat": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopGroupinfoGetRequest",
+		"method": "jingdong.im.pop.groupinfo.get",
+		"request": {
+		}, 
+		"response": {
+			"popgroup": "POPGroup"
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopPasslogGetRequest",
+		"method": "jingdong.im.pop.passlog.get",
+		"request": {
+			"waiter": "String", 
+			"startTime": "Date", 
+			"endTime": "Date", 
+			"page": "int", 
+			"pageSize": "int"
+		}, 
+		"response": {
+			"PassLog": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopReplystatGetRequest",
+		"method": "jingdong.im.pop.replystat.get",
+		"request": {
+			"waiter": "String", 
+			"startTime": "Date", 
+			"endTime": "Date"
+		}, 
+		"response": {
+			"WaiterDailyStat": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopSessionlistGetRequest",
+		"method": "jingdong.im.pop.sessionlist.get",
+		"request": {
+			"waiter": "String", 
+			"startTime": "Date", 
+			"endTime": "Date", 
+			"page": "int", 
+			"pageSize": "int"
+		}, 
+		"response": {
+			"ChatSession": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopUnreplystatGetRequest",
+		"method": "jingdong.im.pop.unreplystat.get",
+		"request": {
+			"waiter": "String", 
+			"startTime": "Date", 
+			"endTime": "Date"
+		}, 
+		"response": {
+			"WaiterDailyStat": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "im",
+		"name": "ImPopWaiterOnlinetimeStatGetRequest",
+		"method": "jingdong.im.pop.waiter.onlinetime.stat.get",
+		"request": {
+			"waiter": "String", 
+			"startTime": "Date", 
+			"endTime": "Date"
+		}, 
+		"response": {
+			"WaiterDailyStat": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzoneCategoryAddRequest",
+		"method": "jingdong.imgzone.category.add",
+		"request": {
+			"cateName": "String", 
+			"parentCateId": "Integer"
+		}, 
+		"response": {
+			"returnCode": "Integer", 
+			"desc": "String", 
+			"cateId": "Integer"
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzoneCategoryQueryRequest",
+		"method": "jingdong.imgzone.category.query",
+		"request": {
+			"cateId": "Integer", 
+			"cateName": "String", 
+			"parentCateId": "Integer"
+		}, 
+		"response": {
+			"returnCode": "int", 
+			"desc": "String", 
+			"cateList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzoneCategoryUpdateRequest",
+		"method": "jingdong.imgzone.category.update",
+		"request": {
+			"cateId": "Integer", 
+			"cateName": "String", 
+			"parentCateId": "Integer"
+		}, 
+		"response": {
+			"returnCode": "Integer", 
+			"desc": "String"
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzonePictureDeleteRequest",
+		"method": "jingdong.imgzone.picture.delete",
+		"request": {
+			"pictureIds": "String"
+		}, 
+		"response": {
+			"returnCode": "int", 
+			"desc": "String", 
+			"successNum": "int", 
+			"illegal": [ "List" ], 
+			"referenced": [ "List" ], 
+			"fail": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzonePictureIsreferencedRequest",
+		"method": "jingdong.imgzone.picture.isreferenced",
+		"request": {
+			"pictureId": "String"
+		}, 
+		"response": {
+			"returnCode": "int", 
+			"desc": "String", 
+			"isReferenced": "boolean"
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzonePictureQueryRequest",
+		"method": "jingdong.imgzone.picture.query",
+		"request": {
+			"pictureId": "String", 
+			"pictureCateId": "Integer", 
+			"pictureName": "String", 
+			"startDate": "Date", 
+			"endDate": "Date", 
+			"pageNum": "Integer", 
+			"pageSize": "Integer"
+		}, 
+		"response": {
+			"returnCode": "Integer", 
+			"desc": "String", 
+			"totalNum": "Integer", 
+			"imgList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzonePictureReplaceRequest",
+		"method": "jingdong.imgzone.picture.replace",
+		"request": {
+			"pictureId": "String", 
+			"imageData": [ "byte[]" ]
+		}, 
+		"response": {
+			"returnCode": "int", 
+			"desc": "String"
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzonePictureUpdateRequest",
+		"method": "jingdong.imgzone.picture.update",
+		"request": {
+			"pictureId": "String", 
+			"pictureName": "String", 
+			"pictureCateId": "Integer"
+		}, 
+		"response": {
+			"returnCode": "int", 
+			"desc": "String"
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzonePictureUploadRequest",
+		"method": "jingdong.imgzone.picture.upload",
+		"request": {
+			"imageData": [ "byte[]" ], 
+			"pictureCateId": "Integer", 
+			"pictureName": "String"
+		}, 
+		"response": {
+			"returnCode": "int", 
+			"desc": "String", 
+			"pictureId": "String", 
+			"pictureUrl": "String"
+		}
+	}, 
+	"api": {
+		"group": "imgzone",
+		"name": "ImgzoneUserinfoQueryRequest",
+		"method": "jingdong.imgzone.userinfo.query",
+		"request": {
+		}, 
+		"response": {
+			"returnCode": "int", 
+			"desc": "String", 
+			"userInfo": "ImgzoneZoneInfo"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheAccountGetRequest",
+		"method": "jingdong.kuaiche.account.get",
+		"request": {
+		}, 
+		"response": {
+			"account": "AccountVO"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheAccountIncomexpenseSearchRequest",
+		"method": "jingdong.kuaiche.account.incomexpense.search",
+		"request": {
+			"inOutType": "Long", 
+			"type": "Long", 
+			"checkType": "Long", 
+			"pageIndex": "Long", 
+			"pageSize": "Long"
+		}, 
+		"response": {
+			"pageInfo": "PageInfo"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheGoodsGetRequest",
+		"method": "jingdong.kuaiche.goods.get",
+		"request": {
+			"skuId": "String"
+		}, 
+		"response": {
+			"result": "JosGoodsInfo"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaichePopGetRequest",
+		"method": "jingdong.kuaiche.pop.get",
+		"request": {
+		}, 
+		"response": {
+			"result": "PopDetailJos"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnBidRankGetRequest",
+		"method": "jingdong.kuaiche.zn.bid.rank.get",
+		"request": {
+			"planJson": "String", 
+			"cid": "Long", 
+			"kwgId": "Long", 
+			"planDate": "String"
+		}, 
+		"response": {
+			"rankReturn": "RankReturnJO"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnKeywordgroupListSearchRequest",
+		"method": "jingdong.kuaiche.zn.keywordgroup.list.search",
+		"request": {
+			"thirdCategoryId": "Long", 
+			"sortField": "String", 
+			"sortType": "Integer", 
+			"pageSize": "Integer", 
+			"pageIndex": "Integer"
+		}, 
+		"response": {
+			"returnInfo": "KeywordQueryVO"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnMaterialLabelsSearchRequest",
+		"method": "jingdong.kuaiche.zn.material.labels.search",
+		"request": {
+		}, 
+		"response": {
+			"materialLabelList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanChannelCreateRequest",
+		"method": "jingdong.kuaiche.zn.plan.channel.create",
+		"request": {
+			"planInfo": "String"
+		}, 
+		"response": {
+			"resultStatus": "ResultStatus"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanChannelModifyRequest",
+		"method": "jingdong.kuaiche.zn.plan.channel.modify",
+		"request": {
+			"planInfo": "String"
+		}, 
+		"response": {
+			"resultStatus": "ResultStatus"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanDetailGetRequest",
+		"method": "jingdong.kuaiche.zn.plan.detail.get",
+		"request": {
+			"planId": "Long"
+		}, 
+		"response": {
+			"planDetailInfo": "PlanDetailInfo"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanListSearchRequest",
+		"method": "jingdong.kuaiche.zn.plan.list.search",
+		"request": {
+			"planName": "String", 
+			"mode": "String", 
+			"status": "Integer", 
+			"isQueryByStatus": "String", 
+			"begin": "Integer", 
+			"end": "Integer", 
+			"pageSize": "Integer", 
+			"pageIndex": "Integer"
+		}, 
+		"response": {
+			"planListInfo": "QueryPlanReturnInfo"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanSearchCreateRequest",
+		"method": "jingdong.kuaiche.zn.plan.search.create",
+		"request": {
+			"planInfo": "String"
+		}, 
+		"response": {
+			"resultStatus": "ResultStatus"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanSearchKeywordAddRequest",
+		"method": "jingdong.kuaiche.zn.plan.search.keyword.add",
+		"request": {
+			"planId": "Long", 
+			"keywordPrice": "String"
+		}, 
+		"response": {
+			"resultStatus": "ResultStatus"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanSearchKeywordDeleteRequest",
+		"method": "jingdong.kuaiche.zn.plan.search.keyword.delete",
+		"request": {
+			"planId": "Long", 
+			"keywordIds": "String"
+		}, 
+		"response": {
+			"resultStatus": "ResultStatus"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanSearchKeywordGetRequest",
+		"method": "jingdong.kuaiche.zn.plan.search.keyword.get",
+		"request": {
+			"planId": "Long"
+		}, 
+		"response": {
+			"keywordsInfo": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanSearchKeywordUpdateRequest",
+		"method": "jingdong.kuaiche.zn.plan.search.keyword.update",
+		"request": {
+			"planId": "Long", 
+			"keywordPrice": "String"
+		}, 
+		"response": {
+			"resultStatus": "ResultStatus"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnPlanSearchModifyRequest",
+		"method": "jingdong.kuaiche.zn.plan.search.modify",
+		"request": {
+			"planInfo": "String"
+		}, 
+		"response": {
+			"resultStatus": "ResultStatus"
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnScheduleAvailableSearchRequest",
+		"method": "jingdong.kuaiche.zn.schedule.available.search",
+		"request": {
+			"spaceId": "Long"
+		}, 
+		"response": {
+			"scheduleDayList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnScheduleBidDetailSearchRequest",
+		"method": "jingdong.kuaiche.zn.schedule.bid.detail.search",
+		"request": {
+			"planId": "Long"
+		}, 
+		"response": {
+			"scheduleList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnSpaceInfoSearchRequest",
+		"method": "jingdong.kuaiche.zn.space.info.search",
+		"request": {
+			"pageId": "Long"
+		}, 
+		"response": {
+			"spaceInfoList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "kuaiche",
+		"name": "KuaicheZnSpacePageByTypeSearchRequest",
+		"method": "jingdong.kuaiche.zn.space.page.by.type.search",
+		"request": {
+			"type": "Integer"
+		}, 
+		"response": {
+			"spacePageInfoList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "list",
+		"name": "PopVenderCenerVenderBrandQueryRequest",
+		"method": "jingdong.pop.vender.cener.venderBrand.query",
+		"request": {
+			"name": "String"
+		}, 
+		"response": {
+			"brandList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "list",
+		"name": "WareCatelogyAttributeListGetRequest",
+		"method": "jingdong.ware.catelogy.attribute.list.get",
+		"request": {
+			"newVersion": "Integer", 
+			"catelogyId": "String", 
+			"client": "String"
+		}, 
+		"response": {
+			"catelogyAttributeList": "CatelogyAttributeList"
+		}
+	}, 
+	"api": {
+		"group": "list",
+		"name": "WareProductCatelogyListGetRequest",
+		"method": "jingdong.ware.product.catelogy.list.get",
+		"request": {
+			"catelogyId": "Integer", 
+			"level": "Integer", 
+			"isIcon": "Boolean", 
+			"isDescription": "Boolean", 
+			"client": "String"
+		}, 
+		"response": {
+			"productCatelogyList": "ProductCatelogyList"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallMallbannercenterAddRequest",
+		"method": "jingdong.ecc.mall.mallbannercenter.add",
+		"request": {
+			"id": "Long", 
+			"mallId": "Long", 
+			"sortNumber": "Integer", 
+			"bannerUrl": "String", 
+			"bannerLink": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"mallBannerResult": "MallBannerResult"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallMallbannercenterDeleteRequest",
+		"method": "jingdong.ecc.mall.mallbannercenter.delete",
+		"request": {
+			"id": "Long", 
+			"mallId": "Long", 
+			"sortNumber": "Integer", 
+			"bannerUrl": "String", 
+			"bannerLink": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"mallBannerResult": "MallBannerResult"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallMallbannercenterSearchRequest",
+		"method": "jingdong.ecc.mall.mallbannercenter.search",
+		"request": {
+			"id": "Long", 
+			"mallId": "Long", 
+			"sortNumber": "Integer", 
+			"bannerUrl": "String", 
+			"bannerLink": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"mallBannerResults": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallMallbannercenterUpdateRequest",
+		"method": "jingdong.ecc.mall.mallbannercenter.update",
+		"request": {
+			"id": "Long", 
+			"mallId": "Long", 
+			"sortNumber": "Integer", 
+			"bannerUrl": "String", 
+			"bannerLink": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"mallBannerResult": "MallBannerResult"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallMallinfocenterAddRequest",
+		"method": "jingdong.ecc.mall.mallinfocenter.add",
+		"request": {
+			"id": "Long", 
+			"title": "String", 
+			"logo": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"mallInfoResult": "MallInfoResult"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallMallinfocenterGetRequest",
+		"method": "jingdong.ecc.mall.mallinfocenter.get",
+		"request": {
+			"id": "Long", 
+			"title": "String", 
+			"logo": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"mallInfoResult": "MallInfoResult"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallMallinfocenterUpdateRequest",
+		"method": "jingdong.ecc.mall.mallinfocenter.update",
+		"request": {
+			"id": "Long", 
+			"title": "String", 
+			"logo": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"mallInfoResult": "MallInfoResult"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallRecommendAddRequest",
+		"method": "jingdong.ecc.mall.recommend.add",
+		"request": {
+			"id": "Long", 
+			"title": "String", 
+			"position": "Integer", 
+			"recType": "Integer", 
+			"mallId": "Long", 
+			"recommendWareListJson": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"MallRecommendResult": "MallRecommendResult"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallRecommendDeleteRequest",
+		"method": "jingdong.ecc.mall.recommend.delete",
+		"request": {
+			"id": "Long", 
+			"title": "String", 
+			"position": "Integer", 
+			"recType": "Integer", 
+			"mallId": "Long", 
+			"recommendWareListJson": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"mallRecommendResult": "MallRecommendResult"
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallRecommendListGetRequest",
+		"method": "jingdong.ecc.mall.recommend.list.get",
+		"request": {
+			"id": "Long", 
+			"title": "String", 
+			"position": "Integer", 
+			"recType": "Integer", 
+			"mallId": "Long", 
+			"recommendWareListJson": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"MallRecommendResults": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "mall",
+		"name": "EccMallRecommendUpdateRequest",
+		"method": "jingdong.ecc.mall.recommend.update",
+		"request": {
+			"id": "Long", 
+			"title": "String", 
+			"position": "Integer", 
+			"recType": "Integer", 
+			"mallId": "Long", 
+			"recommendWareListJson": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"MallRecommendResult": "MallRecommendResult"
+		}
+	}, 
+	"api": {
+		"group": "market",
+		"name": "VasSubscribeGetRequest",
+		"method": "jingdong.vas.subscribe.get",
+		"request": {
+			"userName": "String", 
+			"itemCode": "String"
+		}, 
+		"response": {
+			"itemCode": "String", 
+			"endDate": "String"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionActivitymodeAddRequest",
+		"method": "jingdong.seller.promotion.activitymode.add",
+		"request": {
+			"promoId": "Long", 
+			"numBound": "Integer", 
+			"freqBound": "Integer", 
+			"perMaxNum": "Integer", 
+			"perMinNum": "Integer"
+		}, 
+		"response": {
+			"id": "Long"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionActivitymodeGetRequest",
+		"method": "jingdong.seller.promotion.activitymode.get",
+		"request": {
+			"promoId": "Long"
+		}, 
+		"response": {
+			"activityMode": "ActivityModeVO"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionAddRequest",
+		"method": "jingdong.seller.promotion.add",
+		"request": {
+			"name": "String", 
+			"type": "Integer", 
+			"beginTime": "String", 
+			"endTime": "String", 
+			"bound": "Integer", 
+			"member": "Integer", 
+			"slogan": "String", 
+			"comment": "String"
+		}, 
+		"response": {
+			"promoId": "Long"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionCheckRequest",
+		"method": "jingdong.seller.promotion.check",
+		"request": {
+			"promoId": "Long", 
+			"status": "Integer"
+		}, 
+		"response": {
+			"count": "int"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionCommitRequest",
+		"method": "jingdong.seller.promotion.commit",
+		"request": {
+			"promoId": "Long"
+		}, 
+		"response": {
+			"success": "boolean"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionDeleteRequest",
+		"method": "jingdong.seller.promotion.delete",
+		"request": {
+			"promoId": "Long"
+		}, 
+		"response": {
+			"count": "int"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionGetRequest",
+		"method": "jingdong.seller.promotion.get",
+		"request": {
+			"promoId": "Long"
+		}, 
+		"response": {
+			"promotionVO": "PromotionVO"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionListRequest",
+		"method": "jingdong.seller.promotion.list",
+		"request": {
+			"type": "Integer", 
+			"status": "Integer", 
+			"beginTime": "String", 
+			"endTime": "String", 
+			"skuId": "Long", 
+			"page": "int", 
+			"size": "int"
+		}, 
+		"response": {
+			"totalCount": "Integer", 
+			"promotionVOS": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionOrdermodeAddRequest",
+		"method": "jingdong.seller.promotion.ordermode.add",
+		"request": {
+			"promoId": "Long", 
+			"favorMode": "Integer", 
+			"quota": "String", 
+			"rate": "String", 
+			"plus": "String", 
+			"minus": "String", 
+			"link": "String"
+		}, 
+		"response": {
+			"ids": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionOrdermodeListRequest",
+		"method": "jingdong.seller.promotion.ordermode.list",
+		"request": {
+			"promoId": "Long"
+		}, 
+		"response": {
+			"promoOrderModeVOs": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionPropAddRequest",
+		"method": "jingdong.seller.promotion.prop.add",
+		"request": {
+			"promoId": "Long", 
+			"type": "String", 
+			"num": "String", 
+			"usedWay": "String"
+		}, 
+		"response": {
+			"ids": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionPropListRequest",
+		"method": "jingdong.seller.promotion.prop.list",
+		"request": {
+			"promoId": "Long"
+		}, 
+		"response": {
+			"promoPropVOS": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionResumeRequest",
+		"method": "jingdong.seller.promotion.resume",
+		"request": {
+			"promoId": "Long"
+		}, 
+		"response": {
+			"count": "int"
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionSkuAddRequest",
+		"method": "jingdong.seller.promotion.sku.add",
+		"request": {
+			"promoId": "Long", 
+			"skuIds": "String", 
+			"jdPrices": "String", 
+			"promoPrices": "String", 
+			"seq": "String", 
+			"num": "String", 
+			"bindType": "String"
+		}, 
+		"response": {
+			"ids": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionSkuListRequest",
+		"method": "jingdong.seller.promotion.sku.list",
+		"request": {
+			"wareId": "Long", 
+			"skuId": "Long", 
+			"promoId": "Long", 
+			"bindType": "Integer", 
+			"page": "int", 
+			"size": "int"
+		}, 
+		"response": {
+			"totalCount": "Integer", 
+			"promoSkuVOS": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "marketing",
+		"name": "SellerPromotionSuspendRequest",
+		"method": "jingdong.seller.promotion.suspend",
+		"request": {
+			"promoId": "Long"
+		}, 
+		"response": {
+			"count": "int"
+		}
+	}, 
+	"api": {
+		"group": "mobile",
+		"name": "WarePromotionActivitywareListGetRequest",
+		"method": "jingdong.ware.promotion.activityware.list.get",
+		"request": {
+			"activityId": "Integer", 
+			"page": "Integer", 
+			"pageSize": "Integer", 
+			"client": "String"
+		}, 
+		"response": {
+			"cmsActivityWareList": "CmsActivityWareList"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oAnti_dispatchUpdateRequest",
+		"method": "jingdong.logistics.o2o.anti_dispatch.update",
+		"request": {
+			"stationNo": "String", 
+			"orderId": "String", 
+			"stateOperator": "String", 
+			"realShop": "String", 
+			"antiDispatcherRemark": "String"
+		}, 
+		"response": {
+			"OrderServiceResponse": "OrderServiceResponse"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oCancellstatusUpdateRequest",
+		"method": "jingdong.logistics.o2o.cancellstatus.update",
+		"request": {
+			"stationNo": "String", 
+			"orderId": "String", 
+			"stateOperator": "String", 
+			"orderCancelReason": "String", 
+			"orderCancelRemark": "String"
+		}, 
+		"response": {
+			"OrderResponseStatus": "ResponseStatus"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oDeliverystatusUpdateRequest",
+		"method": "jingdong.logistics.o2o.deliverystatus.update",
+		"request": {
+			"stationNo": "String", 
+			"orderId": "String", 
+			"stateOperator": "String"
+		}, 
+		"response": {
+			"OrderResponseStatus": "ResponseStatus"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oDispatchstatusUpdateRequest",
+		"method": "jingdong.logistics.o2o.dispatchstatus.update",
+		"request": {
+			"stationNo": "String", 
+			"orderId": "String", 
+			"stateOperator": "String", 
+			"antiDispatcherRemark": "String"
+		}, 
+		"response": {
+			"OrderResponseStatus": "ResponseStatus"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oEndstatusUpdateRequest",
+		"method": "jingdong.logistics.o2o.endstatus.update",
+		"request": {
+			"stationNo": "String", 
+			"orderId": "String", 
+			"stateOperator": "String", 
+			"stationPaymentCash": "String", 
+			"stationPaymentPos": "String"
+		}, 
+		"response": {
+			"OrderResponseStatus": "ResponseStatus"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oOrderCarriageRequest",
+		"method": "jingdong.logistics.o2o.order.carriage",
+		"request": {
+			"orderId": "String", 
+			"carrierNo": "String", 
+			"deliverNo": "String"
+		}, 
+		"response": {
+			"OrderExport": "OrderExportResponse"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oOrderQueryAfsRequest",
+		"method": "jingdong.logistics.o2o.order.queryAfs",
+		"request": {
+			"stationNo": "String", 
+			"orderId": "String", 
+			"customerOrderId": "String", 
+			"customerOrderState": "String", 
+			"customerOrderTimeStart": "String", 
+			"customerOrderTimeEnd": "String", 
+			"customerOrderUpdateTimeStart": "String", 
+			"customerOrderUpdateTimeEnd": "String", 
+			"currentPage": "int", 
+			"pageNum": "int"
+		}, 
+		"response": {
+			"afsServiceResponse": "AfsServiceResponse"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oOrderSearchRequest",
+		"method": "jingdong.logistics.o2o.order.search",
+		"request": {
+			"stationNo": "String", 
+			"orderId": "String", 
+			"orderState": "String", 
+			"orderTimeStart": "String", 
+			"orderTimeEnd": "String", 
+			"orderUpdateTimeStart": "String", 
+			"orderUpdateTimeEnd": "String", 
+			"currentPage": "int"
+		}, 
+		"response": {
+			"order": "OrderResponse"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oReceivestatusUpdateRequest",
+		"method": "jingdong.logistics.o2o.receivestatus.update",
+		"request": {
+			"stationNo": "String", 
+			"orderId": "String", 
+			"stateOperator": "String"
+		}, 
+		"response": {
+			"OrderResponseStatus": "ResponseStatus"
+		}
+	}, 
+	"api": {
+		"group": "O2O",
+		"name": "LogisticsO2oSkuStock_ownerUpdateRequest",
+		"method": "jingdong.logistics.o2o.sku.stock_owner.update",
+		"request": {
+			"spuId": "Integer", 
+			"skuId": "String", 
+			"name": "String", 
+			"stockOwner": "String"
+		}, 
+		"response": {
+			"SkuAddResponse": "SkuAddResponse"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderFbpGetRequest",
+		"method": "360buy.order.fbp.get",
+		"request": {
+			"orderId": "String", 
+			"optionalFields": "String"
+		}, 
+		"response": {
+			"orderDetailInfo": "OrderDetailInfo"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderFbpSearchRequest",
+		"method": "360buy.order.fbp.search",
+		"request": {
+			"startDate": "String", 
+			"endDate": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"optionalFields": "String"
+		}, 
+		"response": {
+			"orderResult": "OrderResult"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderGetRequest",
+		"method": "360buy.order.get",
+		"request": {
+			"orderId": "String", 
+			"optionalFields": "String", 
+			"orderState": "String"
+		}, 
+		"response": {
+			"orderDetailInfo": "OrderDetailInfo"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderLbpOutstorageRequest",
+		"method": "360buy.order.lbp.outstorage",
+		"request": {
+			"orderId": "String", 
+			"packageNum": "String", 
+			"sendType": "String", 
+			"logisticsId": "String", 
+			"waybill": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "long"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderLbpPrintDataGetRequest",
+		"method": "360buy.order.lbp.print.data.get",
+		"request": {
+			"orderId": "String"
+		}, 
+		"response": {
+			"apiOrderPrintData": "OrderLbpPrintData"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderLbpWaybillUpdateRequest",
+		"method": "360buy.order.lbp.waybill.update",
+		"request": {
+			"orderId": "String", 
+			"logisticsId": "String", 
+			"waybill": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "long"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderLogisticsSearchRequest",
+		"method": "jingdong.logistics.orders.search",
+		"request": {
+			"venderId": "String", 
+			"startDate": "String", 
+			"endDate": "String", 
+			"page": "String", 
+			"pageSize": "String"
+		}, 
+		"response": {
+			"orders": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderOrderDeleteApplyRequest",
+		"method": "jingdong.order.orderDelete.apply",
+		"request": {
+			"orderId": "long", 
+			"delApplyType": "int", 
+			"delApplyReason": "String"
+		}, 
+		"response": {
+			"result": "ApiJosResult"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderOrderDeleteCancelApplyRequest",
+		"method": "jingdong.order.orderDelete.cancelApply",
+		"request": {
+			"orderId": "long"
+		}, 
+		"response": {
+			"result": "ApiJosResult"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderPrintDataGetRequest",
+		"method": "360buy.order.print.data.get",
+		"request": {
+			"orderId": "String"
+		}, 
+		"response": {
+			"apiOrderPrintData": "OrderPrintData"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderPrintRequest",
+		"method": "360buy.order.print",
+		"request": {
+			"orderId": "String", 
+			"optionalFields": "String"
+		}, 
+		"response": {
+			"printResult": "PrintResult"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderSearchRequest",
+		"method": "360buy.order.search",
+		"request": {
+			"startDate": "String", 
+			"endDate": "String", 
+			"orderState": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"optionalFields": "String", 
+			"sortType": "String", 
+			"dateType": "String"
+		}, 
+		"response": {
+			"orderResult": "OrderResult"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderSoplOutstorageRequest",
+		"method": "360buy.order.sopl.outstorage",
+		"request": {
+			"orderId": "String", 
+			"packageNum": "String", 
+			"sendType": "String", 
+			"addressId": "String", 
+			"logisticsId": "String", 
+			"waybill": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "long"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderSoplPrintDataGetRequest",
+		"method": "360buy.order.sopl.print.data.get",
+		"request": {
+			"orderId": "String"
+		}, 
+		"response": {
+			"apiOrderPrintData": "OrderSoplPrintData"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderSoplWaybillUpdateRequest",
+		"method": "360buy.order.sopl.waybill.update",
+		"request": {
+			"orderId": "String", 
+			"logisticsId": "String", 
+			"waybill": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "long"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderSopOutstorageRequest",
+		"method": "360buy.order.sop.outstorage",
+		"request": {
+			"logisticsId": "String", 
+			"waybill": "String", 
+			"orderId": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "long"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderSopPrintDataGetRequest",
+		"method": "360buy.order.sop.print.data.get",
+		"request": {
+			"orderId": "String"
+		}, 
+		"response": {
+			"apiOrderPrintData": "OrderSopPrintData"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderSopWaybillUpdateRequest",
+		"method": "360buy.order.sop.waybill.update",
+		"request": {
+			"orderId": "String", 
+			"logisticsId": "String", 
+			"waybill": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "long"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderVenderRemarkQueryByOrderIdRequest",
+		"method": "jingdong.order.venderRemark.queryByOrderId",
+		"request": {
+			"orderId": "long"
+		}, 
+		"response": {
+			"venderRemarkQueryResult": "VenderRemarkQueryResult"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OrderVenderRemarkUpdateRequest",
+		"method": "360buy.order.vender.remark.update",
+		"request": {
+			"orderId": "String", 
+			"remark": "String", 
+			"tradeNo": "String", 
+			"flag": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "String"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OverseasOrderSopDeliveryRequest",
+		"method": "360buy.overseas.order.sop.delivery",
+		"request": {
+			"orderId": "String", 
+			"logisticsId": "String", 
+			"waybill": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "long"
+		}
+	}, 
+	"api": {
+		"group": "order",
+		"name": "OverseasOrderSopOutstorageRequest",
+		"method": "360buy.overseas.order.sop.outstorage",
+		"request": {
+			"orderId": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"venderId": "String", 
+			"modified": "String", 
+			"orderId": "long"
+		}
+	}, 
+	"api": {
+		"group": "photo",
+		"name": "EccPhotoAddRequest",
+		"method": "jingdong.ecc.photo.add",
+		"request": {
+			"file": [ "byte[]" ], 
+			"ip": "String"
+		}, 
+		"response": {
+			"photoProxyResult": "PhotoProxyResult"
+		}
+	}, 
+	"api": {
+		"group": "price",
+		"name": "WarePriceGetRequest",
+		"method": "jingdong.ware.price.get",
+		"request": {
+			"skuId": "String"
+		}, 
+		"response": {
+			"priceChanges": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "price",
+		"name": "WarePromotionInfoGetRequest",
+		"method": "jingdong.ware.promotionInfo.get",
+		"request": {
+			"skuId": "String", 
+			"webSite": "int", 
+			"origin": "int"
+		}, 
+		"response": {
+			"promoInfoResponse": "AdwordResponse"
+		}
+	}, 
+	"api": {
+		"group": "promotion",
+		"name": "PromotionSearchRequest",
+		"method": "360buy.promotion.search",
+		"request": {
+			"evtId": "String", 
+			"timeBegin_start": "String", 
+			"timeBegin_end": "String", 
+			"timeEnd_start": "String", 
+			"timeEnd_end": "String", 
+			"wareId": "String", 
+			"levelMember": "LevelMember", 
+			"evtType": "EvtType", 
+			"evtStatus": "EvtStatus", 
+			"checkStatus": "CheckStatus", 
+			"page": "String", 
+			"pageSize": "String", 
+			"skuId": "String"
+		}, 
+		"response": {
+			"promotionSearch": "PromotionSearch"
+		}
+	}, 
+	"api": {
+		"group": "recommend",
+		"name": "WareBrowsetobuyListGetRequest",
+		"method": "jingdong.ware.browsetobuy.list.get",
+		"request": {
+			"wareId": "Long", 
+			"client": "String"
+		}, 
+		"response": {
+			"browseBuyWidsList": "BrowseBuyWidsList"
+		}
+	}, 
+	"api": {
+		"group": "recommend",
+		"name": "WareBuytobuyListGetRequest",
+		"method": "jingdong.ware.buytobuy.list.get",
+		"request": {
+			"wareId": "Long", 
+			"client": "String"
+		}, 
+		"response": {
+			"buyToBuyWidsList": "BuyToBuyWidsList"
+		}
+	}, 
+	"api": {
+		"group": "recommend",
+		"name": "WareCombineListGetRequest",
+		"method": "jingdong.ware.combine.list.get",
+		"request": {
+			"wareId": "Long", 
+			"client": "String"
+		}, 
+		"response": {
+			"combineBuyingWidsList": "CombineBuyingWidsList"
+		}
+	}, 
+	"api": {
+		"group": "recommend",
+		"name": "WarePacksGetRequest",
+		"method": "jingdong.ware.packs.get",
+		"request": {
+			"skuId": "Long", 
+			"client": "String"
+		}, 
+		"response": {
+			"packsList": "PacksList"
+		}
+	}, 
+	"api": {
+		"group": "seller",
+		"name": "SellerVenderInfoGetRequest",
+		"method": "jingdong.seller.vender.info.get",
+		"request": {
+			"extJsonParam": "String"
+		}, 
+		"response": {
+			"venderInfoResult": "VenderInfoResult"
+		}
+	}, 
+	"api": {
+		"group": "seller",
+		"name": "VenderShopQueryRequest",
+		"method": "jingdong.vender.shop.query",
+		"request": {
+		}, 
+		"response": {
+			"shopJosResult": "ShopJosResult"
+		}
+	}, 
+	"api": {
+		"group": "sellercat",
+		"name": "SellerCatAddRequest",
+		"method": "360buy.sellercat.add",
+		"request": {
+			"parentId": "String", 
+			"name": "String", 
+			"isOpen": "Boolean", 
+			"isHomeShow": "Boolean"
+		}, 
+		"response": {
+			"createTime": "String", 
+			"cid": "String"
+		}
+	}, 
+	"api": {
+		"group": "sellercat",
+		"name": "SellerCatDeleteRequest",
+		"method": "360buy.sellercat.delete",
+		"request": {
+			"cid": "String"
+		}, 
+		"response": {
+			"cid": "long", 
+			"created": "String"
+		}
+	}, 
+	"api": {
+		"group": "sellercat",
+		"name": "SellerCatsGetRequest",
+		"method": "360buy.sellercats.get",
+		"request": {
+			"fields": "String"
+		}, 
+		"response": {
+			"shopCatList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "sellercat",
+		"name": "SellerCatUpdateRequest",
+		"method": "360buy.sellercat.update",
+		"request": {
+			"cid": "String", 
+			"name": "String", 
+			"isHomeShow": "Boolean"
+		}, 
+		"response": {
+			"modified": "String", 
+			"cid": "String"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceAlltaskGetRequest",
+		"method": "jingdong.afsservice.alltask.get",
+		"request": {
+			"afsServiceId": "Integer", 
+			"pageNumber": "int", 
+			"pageSize": "int", 
+			"customerPin": "String", 
+			"orderId": "Long", 
+			"afsApplyTimeBegin": "Date", 
+			"afsApplyTimeEnd": "Date", 
+			"approvedDateBegin": "Date", 
+			"approvedDateEnd": "Date"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectAllTask"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceAuditRejectRequest",
+		"method": "jingdong.afsservice.audit.reject",
+		"request": {
+			"afsServiceId": "Integer", 
+			"rejectReason": "String"
+		}, 
+		"response": {
+			"afsServiceAuditRejectResult": "AfsServiceAuditRejectResult"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceCategoryGetRequest",
+		"method": "jingdong.afsservice.category.get",
+		"request": {
+			"afsCategoryId": "Integer"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectAfsCategory"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceCustomerfeedbackTransferRequest",
+		"method": "jingdong.afsservice.customerfeedback.transfer",
+		"request": {
+			"afsServiceId": "Integer", 
+			"reason": "String"
+		}, 
+		"response": {
+			"customerFeedbackTransferResult": "CustomerFeedbackTransferResult"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceFinishedtaskGetRequest",
+		"method": "jingdong.afsservice.finishedtask.get",
+		"request": {
+			"afsServiceId": "Integer", 
+			"pageNumber": "int", 
+			"pageSize": "int", 
+			"customerPin": "String", 
+			"orderId": "Long", 
+			"afsApplyTimeBegin": "Date", 
+			"afsApplyTimeEnd": "Date"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectFinishedTask"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceFreightmessageGetRequest",
+		"method": "jingdong.afsservice.freightmessage.get",
+		"request": {
+			"afsServiceId": "Integer"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectAfsFreight"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceFreightUpdateRequest",
+		"method": "jingdong.afsservice.freight.update",
+		"request": {
+			"afsServiceId": "Integer", 
+			"expressCode": "String", 
+			"expressCompany": "String", 
+			"modifiedMoney": "BigDecimal"
+		}, 
+		"response": {
+			"afsFreightUpdateResult": "AfsFreightUpdateResult"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceHistoryGetRequest",
+		"method": "jingdong.afsservice.history.get",
+		"request": {
+			"orderId": "Long"
+		}, 
+		"response": {
+			"publicResultList": "PublicResultListAfsServiceHistory"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceJdInterveneRequest",
+		"method": "jingdong.afsservice.jd.intervene",
+		"request": {
+			"afsServiceId": "Integer", 
+			"interveneReson": "String"
+		}, 
+		"response": {
+			"jdInterveneResult": "JdInterveneResult"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceMajorcategoryGetRequest",
+		"method": "jingdong.afsservice.majorcategory.get",
+		"request": {
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectMajorCategory"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceMessagesystemGetRequest",
+		"method": "jingdong.afsservice.messagesystem.get",
+		"request": {
+			"afsServiceId": "Integer"
+		}, 
+		"response": {
+			"publicResultList": "PublicResultListMessageSystemInfo"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceOriginalorderidGetRequest",
+		"method": "jingdong.afsservice.originalorderid.get",
+		"request": {
+			"orderId": "Long"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectOrderId"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceReceivetaskGetRequest",
+		"method": "jingdong.afsservice.receivetask.get",
+		"request": {
+			"afsServiceId": "Integer", 
+			"pageNumber": "int", 
+			"pageSize": "int", 
+			"customerPin": "String", 
+			"orderId": "Long", 
+			"afsApplyTimeBegin": "Date", 
+			"afsApplyTimeEnd": "Date"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectReceiveTask"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceRefundinfoGetRequest",
+		"method": "jingdong.afsservice.refundinfo.get",
+		"request": {
+			"afsServiceId": "Integer"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectRefundInfo"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceRemarkAddRequest",
+		"method": "jingdong.afsservice.remark.add",
+		"request": {
+			"afsServiceId": "Integer", 
+			"remark": "String"
+		}, 
+		"response": {
+			"afsServiceRemarkAddResult": "AfsServiceRemarkAddResult"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceReturnAddRequest",
+		"method": "jingdong.afsservice.return.add",
+		"request": {
+			"shipWay": "Integer", 
+			"shipWayName": "String", 
+			"waybill": "String", 
+			"partCodes": "String", 
+			"afsServiceId": "Integer", 
+			"province": "Integer", 
+			"city": "Integer", 
+			"county": "Integer", 
+			"village": "Integer", 
+			"address": "String", 
+			"zipCode": "String", 
+			"consigneeName": "String", 
+			"consigneeTel": "String", 
+			"applayRemark": "String"
+		}, 
+		"response": {
+			"returnAddResult": "ReturnAddResult"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceReturnCancelRequest",
+		"method": "jingdong.afsservice.return.cancel",
+		"request": {
+			"afsServiceId": "Integer"
+		}, 
+		"response": {
+			"returnCancelResult": "ReturnCancelResult"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceServicedetailListRequest",
+		"method": "jingdong.afsservice.servicedetail.list",
+		"request": {
+			"afsServiceId": "Integer"
+		}, 
+		"response": {
+			"publicResultList": "PublicResultListAfsServiceDetail"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceServiceinfoGetRequest",
+		"method": "jingdong.afsservice.serviceinfo.get",
+		"request": {
+			"afsServiceId": "Integer"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectAfsService"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceServicelogGetRequest",
+		"method": "jingdong.afsservice.servicelog.get",
+		"request": {
+			"afsServiceId": "Integer", 
+			"pageNumber": "int", 
+			"pageSize": "int"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectAfsLog"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceTrackmessageReplayRequest",
+		"method": "jingdong.afsservice.trackmessage.replay",
+		"request": {
+			"afsServiceId": "Integer", 
+			"context": "String"
+		}, 
+		"response": {
+			"trackMessageReplyResult": "TrackMessageReplyResult"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceUnpackinginfoGetRequest",
+		"method": "jingdong.afsservice.unpackinginfo.get",
+		"request": {
+			"afsServiceId": "Integer"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectUnpackingInfo"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceUnresolvedtaskGetRequest",
+		"method": "jingdong.afsservice.unresolvedtask.get",
+		"request": {
+			"afsServiceId": "Integer", 
+			"pageNumber": "int", 
+			"pageSize": "int", 
+			"customerPin": "String", 
+			"orderId": "Long", 
+			"afsApplyTimeBegin": "Date", 
+			"afsApplyTimeEnd": "Date"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectUnresolvedTask"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceWaitauditGetRequest",
+		"method": "jingdong.afsservice.waitaudit.get",
+		"request": {
+			"afsServiceId": "Integer", 
+			"fetchPin": "String", 
+			"pageNumber": "int", 
+			"pageSize": "int", 
+			"customerPin": "String", 
+			"orderId": "Long", 
+			"afsApplyTimeBegin": "Date", 
+			"afsApplyTimeEnd": "Date"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectWaitAuditTask"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceWaitfetchGetRequest",
+		"method": "jingdong.afsservice.waitfetch.get",
+		"request": {
+			"afsServiceId": "Integer", 
+			"pageNumber": "int", 
+			"pageSize": "int", 
+			"customerPin": "String", 
+			"orderId": "Long", 
+			"afsApplyTimeBegin": "Date", 
+			"afsApplyTimeEnd": "Date"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectWaitFetch"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "AfsserviceWaitprocesstaskGetRequest",
+		"method": "jingdong.afsservice.waitprocesstask.get",
+		"request": {
+			"afsServiceId": "Integer", 
+			"pageNumber": "int", 
+			"pageSize": "int", 
+			"customerPin": "String", 
+			"orderId": "Long", 
+			"afsApplyTimeBegin": "Date", 
+			"afsApplyTimeEnd": "Date", 
+			"approvedDateBegin": "Date", 
+			"approvedDateEnd": "Date", 
+			"expressCode": "String"
+		}, 
+		"response": {
+			"publicResultObject": "PublicResultObjectWaitProcessTask"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "PopAfsRefundapplyQuerybyidRequest",
+		"method": "jingdong.pop.afs.refundapply.querybyid",
+		"request": {
+			"raId": "Long"
+		}, 
+		"response": {
+			"refundapplyResponse": "RefundapplyResponse"
+		}
+	}, 
+	"api": {
+		"group": "service",
+		"name": "PopAfsRefundapplyQuerylistRequest",
+		"method": "jingdong.pop.afs.refundapply.querylist",
+		"request": {
+			"status": "String", 
+			"id": "String", 
+			"orderId": "String", 
+			"buyerId": "String", 
+			"buyerName": "String", 
+			"applyTimeStart": "String", 
+			"applyTimeEnd": "String", 
+			"checkTimeStart": "String", 
+			"checkTimeEnd": "String", 
+			"pageIndex": "Integer", 
+			"pageSize": "Integer"
+		}, 
+		"response": {
+			"refundApplyResponse": "RefundapplyResponse"
+		}
+	}, 
+	"api": {
+		"group": "stock",
+		"name": "SkuStockGetRequest",
+		"method": "jingdong.sku.stock.get",
+		"request": {
+			"skuId": "Long", 
+			"areaId": "String"
+		}, 
+		"response": {
+			"stockStatus": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "DropshipDpsCurrenttimeRequest",
+		"method": "jingdong.dropship.dps.currenttime",
+		"request": {
+		}, 
+		"response": {
+			"currentTime": "Date"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "DropshipDpsDeliveryRequest",
+		"method": "jingdong.dropship.dps.delivery",
+		"request": {
+			"customOrderId": "Long", 
+			"carrierId": "Integer", 
+			"carrierBusinessName": "String", 
+			"shipNo": "String", 
+			"estimateDate": "Date"
+		}, 
+		"response": {
+			"deliverResult": "DeliverDoResultSetDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "DropshipDpsOutboundRequest",
+		"method": "jingdong.dropship.dps.outbound",
+		"request": {
+			"customOrderId": "Long"
+		}, 
+		"response": {
+			"outBoundResult": "OutBoundResultDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "DropshipDpsPrerefundRequest",
+		"method": "jingdong.dropship.dps.prerefund",
+		"request": {
+			"customOrderId": "Long", 
+			"approvalSuggestion": "String", 
+			"approvalState": "String", 
+			"id": "Long", 
+			"operatorState": "int"
+		}, 
+		"response": {
+			"prerefundResult": "PreRefundResult"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "DropshipDpsRefuseRequest",
+		"method": "jingdong.dropship.dps.refuse",
+		"request": {
+			"customOrderId": "Long", 
+			"refuseReason": "String"
+		}, 
+		"response": {
+			"refuseResult": "RefuseResult"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "DropshipDpsSearchpreRequest",
+		"method": "jingdong.dropship.dps.searchpre",
+		"request": {
+			"pageSize": "Integer", 
+			"page": "Integer", 
+			"beginDate": "Date", 
+			"endDate": "Date"
+		}, 
+		"response": {
+			"searchPreResult": "ReturnOrderPreForJosResultListDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "DropshipDpsSearchRequest",
+		"method": "jingdong.dropship.dps.search",
+		"request": {
+			"pageSize": "Integer", 
+			"page": "Integer", 
+			"beginDate": "Date", 
+			"endDate": "Date"
+		}, 
+		"response": {
+			"searchResult": "QueryOrderForJosResultListDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "DropshipDpsSearchsingleRequest",
+		"method": "jingdong.dropship.dps.searchsingle",
+		"request": {
+			"customOrderId": "Long"
+		}, 
+		"response": {
+			"searchSingleResult": "QuerySingleOrderForJosResultDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "PoDetailPageGetRequest",
+		"method": "jingdong.po.detail.page.get",
+		"request": {
+			"orderId": "Long", 
+			"sortFiled": "String", 
+			"sortMode": "String", 
+			"pageIndex": "Integer", 
+			"pageSize": "Integer"
+		}, 
+		"response": {
+			"detailResultDto": "DetailResultDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "PoListPageGetRequest",
+		"method": "jingdong.po.list.page.get",
+		"request": {
+			"deliverCenterId": "Integer", 
+			"status": "Integer", 
+			"createdDateStart": "Date", 
+			"createdDateEnd": "Date", 
+			"isEptCustomized": "Boolean", 
+			"pageIndex": "Integer", 
+			"pageSize": "Integer", 
+			"orderIds": "String", 
+			"wareIds": "String", 
+			"states": "String", 
+			"confirmStates": "String", 
+			"orderAttributes": "String"
+		}, 
+		"response": {
+			"orderResultDto": "OrderResultDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "ProcurementOrderConfirmRequest",
+		"method": "jingdong.procurement.order.confirm",
+		"request": {
+			"orderId": "Long", 
+			"deliveryTime": "Date", 
+			"wareId": "String", 
+			"deliverCenterId": "String", 
+			"backExplanationType": "String", 
+			"confirmNum": "String"
+		}, 
+		"response": {
+			"result": "Boolean"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "ProcurementOrderCreateRequest",
+		"method": "jingdong.procurement.order.create",
+		"request": {
+			"deliverCenterId": "Integer", 
+			"purchaserErpCode": "String", 
+			"remark": "String", 
+			"wareId": "String", 
+			"allocationDeliverCenterId": "String", 
+			"originalNum": "String"
+		}, 
+		"response": {
+			"purchaseOrderCodes": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "UserCategory3InfoGetRequest",
+		"method": "jingdong.userCategory3.info.get",
+		"request": {
+		}, 
+		"response": {
+			"userCategory3Info": "UserCategory3InfoDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "VcCreateReturnOrderRequest",
+		"method": "jingdong.vc.create.return.order",
+		"request": {
+			"fromDeliverCenterId": "Integer", 
+			"toDeliverCenterId": "Integer", 
+			"purchaseErpCode": "String", 
+			"balanceType": "Integer", 
+			"transportType": "Integer", 
+			"receiverName": "String", 
+			"receiverCell": "String", 
+			"pikerID": "String", 
+			"reservedPickUpDate": "Date", 
+			"receiverAddress": "String", 
+			"postCode": "String", 
+			"wareId": "String", 
+			"returnNum": "String"
+		}, 
+		"response": {
+			"returnOrderIds": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "VcGetReturnOrderDetailRequest",
+		"method": "jingdong.vc.get.return.order.detail",
+		"request": {
+			"returnId": "Long"
+		}, 
+		"response": {
+			"detailResultDto": "DetailResultDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "VcReturnOrderListPageGetRequest",
+		"method": "jingdong.vc.return.order.list.page.get",
+		"request": {
+			"returnId": "Long", 
+			"fromDeliverCenterId": "Integer", 
+			"returnStates": "String", 
+			"createDateBegin": "Date", 
+			"createDateEnd": "Date", 
+			"pageSize": "Integer", 
+			"pageIndex": "Integer"
+		}, 
+		"response": {
+			"roResultDto": "RoResultDto"
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "VcStockSalesDetailGetRequest",
+		"method": "jingdong.vc.stock.sales.detail.get",
+		"request": {
+			"productCode": "String"
+		}, 
+		"response": {
+			"arg43": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "supplier",
+		"name": "VcStockSalesGetRequest",
+		"method": "jingdong.vc.stock.sales.get",
+		"request": {
+		}, 
+		"response": {
+			"arg36": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "tools",
+		"name": "TimeGetRequest",
+		"method": "360buy.time.get",
+		"request": {
+		}, 
+		"response": {
+			"time": "String"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceFwlistpvGetRequest",
+		"method": "jingdong.dataservice.fwlistpv.get",
+		"request": {
+			"url": "String", 
+			"stat_dt": "String", 
+			"end_dt": "String"
+		}, 
+		"response": {
+			"resultDTO": "FwResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceFwreferpvGetRequest",
+		"method": "jingdong.dataservice.fwreferpv.get",
+		"request": {
+			"url": "String", 
+			"stat_dt": "String", 
+			"end_dt": "String"
+		}, 
+		"response": {
+			"resultDTO": "FwResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShoppvtop15bydayGetRequest",
+		"method": "jingdong.dataservice.shoppvtop15byday.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopPvResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShoppvtop15bymonthGetRequest",
+		"method": "jingdong.dataservice.shoppvtop15bymonth.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopPvResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShoppvtop15byweekGetRequest",
+		"method": "jingdong.dataservice.shoppvtop15byweek.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopPvResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopsalesbydayGetRequest",
+		"method": "jingdong.dataservice.shopsalesbyday.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopSalesResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopsalesbymonthGetRequest",
+		"method": "jingdong.dataservice.shopsalesbymonth.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopSalesResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopsalesbyweekGetRequest",
+		"method": "jingdong.dataservice.shopsalesbyweek.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopSalesResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopsalestop15bydayGetRequest",
+		"method": "jingdong.dataservice.shopsalestop15byday.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopSalesTop15ResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopsalestop15bymonthGetRequest",
+		"method": "jingdong.dataservice.shopsalestop15bymonth.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopSalesTop15ResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopsalestop15byweekGetRequest",
+		"method": "jingdong.dataservice.shopsalestop15byweek.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopSalesTop15ResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopuvtop15bydayGetRequest",
+		"method": "jingdong.dataservice.shopuvtop15byday.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopUvResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopuvtop15bymonthGetRequest",
+		"method": "jingdong.dataservice.shopuvtop15bymonth.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopUvResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopuvtop15byweekGetRequest",
+		"method": "jingdong.dataservice.shopuvtop15byweek.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopUvResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopvistop15bydayGetRequest",
+		"method": "jingdong.dataservice.shopvistop15byday.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopVistResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopvistop15bymonthGetRequest",
+		"method": "jingdong.dataservice.shopvistop15bymonth.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopVistResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopvistop15byweekGetRequest",
+		"method": "jingdong.dataservice.shopvistop15byweek.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopVistResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopvoltop15bydayGetRequest",
+		"method": "jingdong.dataservice.shopvoltop15byday.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopVolResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopvoltop15bymonthGetRequest",
+		"method": "jingdong.dataservice.shopvoltop15bymonth.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopVolResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "DataserviceShopvoltop15byweekGetRequest",
+		"method": "jingdong.dataservice.shopvoltop15byweek.get",
+		"request": {
+			"timeId": "String"
+		}, 
+		"response": {
+			"resultDTO": "ShopVolResultDTO"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "HostingdataJddpDataAddRequest",
+		"method": "jingdong.hostingdata.jddp.data.add",
+		"request": {
+			"tableName": "String", 
+			"dataList": "String"
+		}, 
+		"response": {
+			"result": "UploadResponse"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "HostingdataJddpDataListGetRequest",
+		"method": "jingdong.hostingdata.jddp.data.list.get",
+		"request": {
+			"sqlId": "String", 
+			"parameter": "String"
+		}, 
+		"response": {
+			"result": "DownloadResponse"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "HostingdataJddpStatusGetRequest",
+		"method": "jingdong.hostingdata.jddp.status.get",
+		"request": {
+			"parameter": "String"
+		}, 
+		"response": {
+			"result": "GetStatusResponse"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "SdkMrCreateRequest",
+		"method": "jingdong.sdk.mr.create",
+		"request": {
+			"programName": "String"
+		}, 
+		"response": {
+			"result": "ResponseMsg"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "SdkMrDebugRequest",
+		"method": "jingdong.sdk.mr.debug",
+		"request": {
+			"programIdOrName": "String", 
+			"runDay": "String"
+		}, 
+		"response": {
+			"result": "ResponseMsg"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "SdkMrKillRequest",
+		"method": "jingdong.sdk.mr.kill",
+		"request": {
+			"programIdOrName": "String"
+		}, 
+		"response": {
+			"result": "ResponseMsg"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "SdkMrListRequest",
+		"method": "jingdong.sdk.mr.list",
+		"request": {
+		}, 
+		"response": {
+			"result": "ResponseMsg"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "SdkMrMrinfoGetRequest",
+		"method": "jingdong.sdk.mr.mrinfo.get",
+		"request": {
+			"programIdOrName": "String"
+		}, 
+		"response": {
+			"result": "ResponseMsg"
+		}
+	}, 
+	"api": {
+		"group": "udp",
+		"name": "SdkMrTokenGetRequest",
+		"method": "jingdong.sdk.mr.token.get",
+		"request": {
+			"timeStamp": "long", 
+			"funName": "String", 
+			"fileName": "String", 
+			"fileLength": "long", 
+			"flag": "boolean"
+		}, 
+		"response": {
+			"result": "ResponseMsg"
+		}
+	}, 
+	"api": {
+		"group": "user",
+		"name": "EccUserGetRequest",
+		"method": "jingdong.ecc.user.get",
+		"request": {
+			"userId": "Long", 
+			"ip": "String"
+		}, 
+		"response": {
+			"userResult": "UserResult"
+		}
+	}, 
+	"api": {
+		"group": "user",
+		"name": "EccUserSearchRequest",
+		"method": "jingdong.ecc.user.search",
+		"request": {
+			"ip": "String", 
+			"pageSize": "int", 
+			"pageIndex": "int"
+		}, 
+		"response": {
+			"userPagingResult": "UserPagingResult"
+		}
+	}, 
+	"api": {
+		"group": "user",
+		"name": "SnsExchangejpeasRequest",
+		"method": "jingdong.sns.exchangejpeas",
+		"request": {
+			"clientId": "String", 
+			"businessId": "String", 
+			"key": "String", 
+			"signature": "String", 
+			"integral": "Integer", 
+			"jpeas": "Integer", 
+			"remark": "String", 
+			"status": "Integer"
+		}, 
+		"response": {
+			"exchangeResult": "JOSResult"
+		}
+	}, 
+	"api": {
+		"group": "user",
+		"name": "SnsExchangestatusGetRequest",
+		"method": "jingdong.sns.exchangestatus.get",
+		"request": {
+			"clientId": "String", 
+			"businessId": "String", 
+			"key": "String", 
+			"signature": "String"
+		}, 
+		"response": {
+			"queryexchangestatusResult": "JOSResult"
+		}
+	}, 
+	"api": {
+		"group": "vender",
+		"name": "VenderGetRequest",
+		"method": "360buy.vender.get",
+		"request": {
+			"fields": "String"
+		}, 
+		"response": {
+			"vender": "Vender"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "EccItemAddRequest",
+		"method": "jingdong.ecc.item.add",
+		"request": {
+			"itemId": "Long", 
+			"itemName": "String", 
+			"cid": "Long", 
+			"itemStatus": "Integer", 
+			"itemLocation": "String", 
+			"brand": "String", 
+			"weight": "Integer", 
+			"packListing": "String", 
+			"aftService": "String", 
+			"specParam": "String", 
+			"itemDes": "String", 
+			"operator": "String", 
+			"skuListJson": "String", 
+			"itemPictureListJson": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"itemProxyResult": "ItemProxyResult"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "EccItemDelistingRequest",
+		"method": "jingdong.ecc.item.delisting",
+		"request": {
+			"itemId": "Long"
+		}, 
+		"response": {
+			"result": "ItemResult"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "EccItemGetRequest",
+		"method": "jingdong.ecc.item.get",
+		"request": {
+			"itemId": "Long", 
+			"ip": "String"
+		}, 
+		"response": {
+			"ItemProxyResult": "ItemProxyResult"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "EccItemListingRequest",
+		"method": "jingdong.ecc.item.listing",
+		"request": {
+			"itemId": "Long"
+		}, 
+		"response": {
+			"result": "ItemResult"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "EccItemSearchRequest",
+		"method": "jingdong.ecc.item.search",
+		"request": {
+			"itemId": "Long", 
+			"itemStatus": "Integer", 
+			"itemName": "String", 
+			"categoryId": "Long", 
+			"ip": "String", 
+			"pageSize": "Integer", 
+			"pageIndex": "Integer", 
+			"orderCloumn": "String", 
+			"orderType": "String"
+		}, 
+		"response": {
+			"result": "ItemPagingProxyResult"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "EccItemUpdateRequest",
+		"method": "jingdong.ecc.item.update",
+		"request": {
+			"itemId": "Long", 
+			"itemName": "String", 
+			"cid": "Long", 
+			"itemStatus": "Integer", 
+			"itemLocation": "String", 
+			"brand": "String", 
+			"weight": "Integer", 
+			"packListing": "String", 
+			"aftService": "String", 
+			"specParam": "String", 
+			"itemDes": "String", 
+			"operator": "String", 
+			"skuListJson": "String", 
+			"itemPictureListJson": "String", 
+			"ip": "String"
+		}, 
+		"response": {
+			"itemProxyResult": "ItemProxyResult"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "EccSkuGetRequest",
+		"method": "jingdong.ecc.sku.get",
+		"request": {
+			"skuId": "Long"
+		}, 
+		"response": {
+			"itemSkuResult": "ItemSkuResult"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "EccSkuSearchRequest",
+		"method": "jingdong.ecc.sku.search",
+		"request": {
+			"skuId": "String"
+		}, 
+		"response": {
+			"itemSkuResultList": "ItemSkuListResult"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "SkuCustomGetRequest",
+		"method": "360buy.sku.custom.get",
+		"request": {
+			"outerId": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"sku": "Sku"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareAddRequest",
+		"method": "360buy.ware.add",
+		"request": {
+			"tradeNo": "String", 
+			"wareLocation": "String", 
+			"cid": "String", 
+			"shopCategory": "String", 
+			"title": "String", 
+			"upcCode": "String", 
+			"optionType": "String", 
+			"itemNum": "String", 
+			"stockNum": "String", 
+			"producter": "String", 
+			"wrap": "String", 
+			"length": "String", 
+			"wide": "String", 
+			"high": "String", 
+			"weight": "String", 
+			"costPrice": "String", 
+			"marketPrice": "String", 
+			"jdPrice": "String", 
+			"notes": "String", 
+			"wareImage": [ "byte[]" ], 
+			"packListing": "String", 
+			"service": "String", 
+			"skuProperties": "String", 
+			"attributes": "String", 
+			"skuPrices": "String", 
+			"skuStocks": "String", 
+			"propertyAlias": "String", 
+			"outerId": "String", 
+			"isPayFirst": "String", 
+			"isCanVAT": "String", 
+			"isImported": "String", 
+			"isHealthProduct": "String", 
+			"isShelfLife": "String", 
+			"shelfLifeDays": "String", 
+			"isSerialNo": "String", 
+			"isAppliancesCard": "String", 
+			"isSpecialWet": "String", 
+			"wareBigSmallModel": "String", 
+			"warePackType": "String", 
+			"inputPids": "String", 
+			"inputStrs": "String", 
+			"hasCheckCode": "String", 
+			"adContent": "String", 
+			"listTime": "String"
+		}, 
+		"response": {
+			"wareId": "long", 
+			"skuInfo": [ "List" ], 
+			"created": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareAddVenderSellSkuRequest",
+		"method": "360buy.wares.vendersellsku.add",
+		"request": {
+			"category_id": "String", 
+			"index_id": "String", 
+			"attribute_id": "String", 
+			"attribute_value": "String", 
+			"features": "String", 
+			"status": "String"
+		}, 
+		"response": {
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareAreaLimitSearchRequest",
+		"method": "360buy.ware.area.limit.search",
+		"request": {
+			"wareId": "String", 
+			"type": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareAreaLimits": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareAreaLimitUpdateRequest",
+		"method": "360buy.ware.area.limit.update",
+		"request": {
+			"levs": "String", 
+			"areaIds": "String", 
+			"areaFids": "String", 
+			"wareId": "String", 
+			"type": "String"
+		}, 
+		"response": {
+			"wareId": "long"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareBasebookGetRequest",
+		"method": "jingdong.ware.basebook.get",
+		"request": {
+			"skuId": "String"
+		}, 
+		"response": {
+			"BookEntity": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareBaseproductGetRequest",
+		"method": "jingdong.ware.baseproduct.get",
+		"request": {
+			"ids": "String", 
+			"base": "String"
+		}, 
+		"response": {
+			"productBase": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareBasevideoGetRequest",
+		"method": "jingdong.ware.basevideo.get",
+		"request": {
+			"skuId": "String"
+		}, 
+		"response": {
+			"videoEntitys": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareBookbigfieldGetRequest",
+		"method": "jingdong.ware.bookbigfield.get",
+		"request": {
+			"skuId": "String"
+		}, 
+		"response": {
+			"BookBigFieldEntity": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareDeleteRequest",
+		"method": "360buy.ware.delete",
+		"request": {
+			"wareId": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"wareId": "long", 
+			"created": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareDelistingGetRequest",
+		"method": "360buy.ware.delisting.get",
+		"request": {
+			"cid": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"endModified": "String", 
+			"startModified": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareInfos": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareGetRequest",
+		"method": "360buy.ware.get",
+		"request": {
+			"wareId": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"ware": "Ware"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareInfoByInfoRequest",
+		"method": "360buy.wares.search",
+		"request": {
+			"cid": "String", 
+			"startPrice": "String", 
+			"endPrice": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"title": "String", 
+			"orderBy": "String", 
+			"startTime": "String", 
+			"endTime": "String", 
+			"startModified": "String", 
+			"endModified": "String", 
+			"wareStatus": "String", 
+			"fields": "String", 
+			"parentShopCategoryId": "String", 
+			"shopCategoryId": "String", 
+			"itemNum": "String"
+		}, 
+		"response": {
+			"wareInfos": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareListingGetRequest",
+		"method": "360buy.ware.listing.get",
+		"request": {
+			"cid": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"endModified": "String", 
+			"startModified": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareInfos": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareListRequest",
+		"method": "360buy.wares.list.get",
+		"request": {
+			"wareIds": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareList": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareListSearchRequest",
+		"method": "jingdong.wares.list.search",
+		"request": {
+			"cid": "String", 
+			"startPrice": "String", 
+			"endPrice": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"title": "String", 
+			"startTime": "String", 
+			"endTime": "String", 
+			"startModified": "String", 
+			"endModified": "String", 
+			"wareStatus": "String", 
+			"fields": "String", 
+			"itemNum": "String", 
+			"shopCateGoryId": "String"
+		}, 
+		"response": {
+			"wareInfos": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareProductbigfieldGetRequest",
+		"method": "jingdong.ware.productbigfield.get",
+		"request": {
+			"skuId": "String", 
+			"field": "String"
+		}, 
+		"response": {
+			"shouHou": "String", 
+			"wdis": "String", 
+			"propCode": "String", 
+			"wareQd": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareProductDetailSearchListGetRequest",
+		"method": "jingdong.ware.product.detail.search.list.get",
+		"request": {
+			"skuId": "Long", 
+			"isLoadWareScore": "Boolean", 
+			"client": "String"
+		}, 
+		"response": {
+			"productDetailList": "ProductDetailList"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareProductimageGetRequest",
+		"method": "jingdong.ware.productimage.get",
+		"request": {
+			"skuId": "String"
+		}, 
+		"response": {
+			"imagePathList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareProductSearchListGetRequest",
+		"method": "jingdong.ware.product.search.list.get",
+		"request": {
+			"isLoadAverageScore": "Boolean", 
+			"isLoadPromotion": "Boolean", 
+			"sort": "Integer", 
+			"page": "Integer", 
+			"pageSize": "Integer", 
+			"keyword": "String", 
+			"client": "String"
+		}, 
+		"response": {
+			"searchProductList": "SearchProductList"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareProductsortGetRequest",
+		"method": "jingdong.ware.productsort.get",
+		"request": {
+			"productSortIds": "String"
+		}, 
+		"response": {
+			"productSorts": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareProductStockListGetRequest",
+		"method": "jingdong.ware.product.stock.list.get",
+		"request": {
+			"skuId": "Integer", 
+			"provinceId": "Integer", 
+			"client": "String"
+		}, 
+		"response": {
+			"productStock": "ProductStock"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WarePromotionSearchCatelogyListRequest",
+		"method": "jingdong.ware.promotion.search.catelogy.list",
+		"request": {
+			"catelogyId": "String", 
+			"page": "Integer", 
+			"pageSize": "Integer", 
+			"client": "String"
+		}, 
+		"response": {
+			"searchCatelogyList": "SearchCatelogyList"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WarePropimgDeleteRequest",
+		"method": "360buy.ware.propimg.delete",
+		"request": {
+			"wareId": "String", 
+			"attributeValueId": "String", 
+			"imageId": "String"
+		}, 
+		"response": {
+			"imageId": "int", 
+			"created": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WarePropimgsGetRequest",
+		"method": "360buy.ware.propimgs.get",
+		"request": {
+			"wareId": "String", 
+			"attributeValueId": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"warePropimg": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WarePropimgsSearchRequest",
+		"method": "360buy.ware.propimgs.search",
+		"request": {
+			"wareId": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"warePropimg": [ "List" ], 
+			"total": "int"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WarePropimgUpdateRequest",
+		"method": "360buy.ware.propimg.update",
+		"request": {
+			"wareId": "String", 
+			"attributeValueId": "String", 
+			"isMainPic": "Boolean", 
+			"imageId": "String"
+		}, 
+		"response": {
+			"imageId": "int", 
+			"created": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSelectedProvinceListGetRequest",
+		"method": "jingdong.ware.selected.province.list.get",
+		"request": {
+			"client": "String"
+		}, 
+		"response": {
+			"provinceList": "ProvinceList"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSkuAddRequest",
+		"method": "360buy.ware.sku.add",
+		"request": {
+			"wareId": "String", 
+			"attributes": "String", 
+			"jdPrice": "String", 
+			"stockNum": "String", 
+			"tradeNo": "String", 
+			"outerId": "String"
+		}, 
+		"response": {
+			"created": "String", 
+			"skuId": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSkuDeleteRequest",
+		"method": "360buy.ware.sku.delete",
+		"request": {
+			"skuId": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"skuId": "long", 
+			"modified": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSkuGetRequest",
+		"method": "360buy.ware.sku.get",
+		"request": {
+			"skuId": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"sku": "Sku"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSkuPriceUpdateRequest",
+		"method": "360buy.sku.price.update",
+		"request": {
+			"skuId": "String", 
+			"outerId": "String", 
+			"price": "String", 
+			"tradeNo": "String", 
+			"marketPrice": "String", 
+			"jdPrice": "String"
+		}, 
+		"response": {
+			"modified": "String", 
+			"skuId": "String", 
+			"outerId": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSkuSearchListGetRequest",
+		"method": "jingdong.ware.sku.search.list.get",
+		"request": {
+			"skuId": "Long", 
+			"client": "String"
+		}, 
+		"response": {
+			"productSkuList": "ProductSkuList"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSkusGetRequest",
+		"method": "360buy.ware.skus.get",
+		"request": {
+			"wareIds": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"skus": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSkuStockUpdateRequest",
+		"method": "360buy.sku.stock.update",
+		"request": {
+			"skuId": "String", 
+			"outerId": "String", 
+			"quantity": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"modified": "String", 
+			"skuId": "String", 
+			"outerId": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareSkuUpdateRequest",
+		"method": "360buy.ware.sku.update",
+		"request": {
+			"skuId": "String", 
+			"wareId": "String", 
+			"outerId": "String", 
+			"attributes": "String", 
+			"jdPrice": "String", 
+			"stockNum": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"modified": "String", 
+			"skuId": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareTemplateAddRequest",
+		"method": "360buy.ware.template.add",
+		"request": {
+			"name": "String", 
+			"contents": [ "String[]" ]
+		}, 
+		"response": {
+			"id": "Long"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareTemplateDeleteRequest",
+		"method": "360buy.ware.template.delete",
+		"request": {
+			"id": "String"
+		}, 
+		"response": {
+			"id": "Long"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareTemplateGetRequest",
+		"method": "360buy.ware.template.get",
+		"request": {
+			"id": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareTemplate": "WareTemplate"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareTemplateIdsAndNamesGetRequest",
+		"method": "360buy.ware.template.ids.names.get",
+		"request": {
+			"fields": "String"
+		}, 
+		"response": {
+			"wareTemplateList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareTemplateToWaresUpdateRequest",
+		"method": "360buy.ware.template.to.wares.update",
+		"request": {
+			"id": "String", 
+			"wareIds": "String"
+		}, 
+		"response": {
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareTemplateUpdateRequest",
+		"method": "360buy.ware.template.update",
+		"request": {
+			"id": "String", 
+			"name": "String", 
+			"contents": [ "String[]" ]
+		}, 
+		"response": {
+			"id": "Long"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareUpdateDelistingRequest",
+		"method": "360buy.ware.update.delisting",
+		"request": {
+			"wareId": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"wareId": "long", 
+			"modified": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareUpdateListingRequest",
+		"method": "360buy.ware.update.listing",
+		"request": {
+			"wareId": "String", 
+			"tradeNo": "String"
+		}, 
+		"response": {
+			"wareId": "long", 
+			"modified": "String"
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareUpdateRequest",
+		"method": "360buy.ware.update",
+		"request": {
+			"isPayFirst": "String", 
+			"isCanVAT": "String", 
+			"isImported": "String", 
+			"isHealthProduct": "String", 
+			"shelfLifeDays": "String", 
+			"isSerialNo": "String", 
+			"isAppliancesCard": "String", 
+			"isSpecialWet": "String", 
+			"wareBigSmallModel": "String", 
+			"warePackType": "String", 
+			"isShelfLife": "String", 
+			"wareId": "String", 
+			"shopCategory": "String", 
+			"title": "String", 
+			"upcCode": "String", 
+			"optionType": "String", 
+			"itemNum": "String", 
+			"stockNum": "String", 
+			"wareLocation": "String", 
+			"producter": "String", 
+			"wrap": "String", 
+			"length": "String", 
+			"wide": "String", 
+			"high": "String", 
+			"weight": "String", 
+			"costPrice": "String", 
+			"marketPrice": "String", 
+			"jdPrice": "String", 
+			"notes": "String", 
+			"rate": "String", 
+			"packListing": "String", 
+			"service": "String", 
+			"skuProperties": "String", 
+			"attributes": "String", 
+			"skuPrices": "String", 
+			"skuStocks": "String", 
+			"tradeNo": "String", 
+			"propertyAlias": "String", 
+			"outerId": "String", 
+			"inputPids": "String", 
+			"inputStrs": "String", 
+			"hasCheckCode": "String", 
+			"adContent": "String", 
+			"listTime": "String"
+		}, 
+		"response": {
+			"modified": "String", 
+			"wareId": "String", 
+			"skuInfo": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareUpdateVenderSellSkuRequest",
+		"method": "360buy.wares.vendersellsku.update",
+		"request": {
+			"valueId": "String", 
+			"category_id": "String", 
+			"index_id": "String", 
+			"attribute_id": "String", 
+			"attribute_value": "String", 
+			"features": "String", 
+			"status": "String"
+		}, 
+		"response": {
+		}
+	}, 
+	"api": {
+		"group": "ware",
+		"name": "WareVideobigfieldGetRequest",
+		"method": "jingdong.ware.videobigfield.get",
+		"request": {
+			"skuId": "String"
+		}, 
+		"response": {
+			"VideoBigFieldEntity": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.category",
+		"name": "WareAttributesGetRequest",
+		"method": "jingdong.wareattributes.get",
+		"request": {
+			"cid": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareAttributes": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.category",
+		"name": "WareCategoryGetRequest",
+		"method": "jingdong.warecategory.get",
+		"request": {
+			"cid": "String", 
+			"level": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareCategories": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.cps",
+		"name": "CPSCatalogPageGetRequest",
+		"method": "jingdong.tuiguang.cat.get",
+		"request": {
+			"fields": "String", 
+			"aCid": "String", 
+			"bCid": "String", 
+			"cCid": "String", 
+			"level": "String", 
+			"isMobile": "String", 
+			"pageIndex": "String", 
+			"pageSize": "String", 
+			"isNeedImg": "Boolean", 
+			"imgSizeType": "String", 
+			"serialNumber": "String"
+		}, 
+		"response": {
+			"promoteWares": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.cps",
+		"name": "CPSSpreadHomeInfoRequest",
+		"method": "jingdong.tuiguang.homepage.get",
+		"request": {
+			"fields": "String", 
+			"isMobile": "String", 
+			"isNeedImg": "Boolean", 
+			"imgSizeType": "String", 
+			"serialNumber": "String"
+		}, 
+		"response": {
+			"homeInfoModule": "CPSSpreadHomeInfoModule"
+		}
+	}, 
+	"api": {
+		"group": "website.cps",
+		"name": "CPSWareDetailPageGetRequest",
+		"method": "jingdong.tuiguang.wares.detail.get",
+		"request": {
+			"fields": "String", 
+			"skuIds": "String", 
+			"isMobile": "String", 
+			"linkType": "String", 
+			"imgSizeType": "String"
+		}, 
+		"response": {
+			"totalCount": "int", 
+			"wareDetailList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.recommend",
+		"name": "AnotherBuyCombineRecommendRequest",
+		"method": "jingdong.anotherbuyrecommend.ware.get",
+		"request": {
+			"wareId": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"favoriteWares": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.recommend",
+		"name": "CombineRecommendRequest",
+		"method": "jingdong.combinerecommend.ware.get",
+		"request": {
+			"wareId": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"favoriteWares": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.recommend",
+		"name": "UserBrowseBuyRecommendRequest",
+		"method": "jingdong.userbrowsebuyrecommend.ware.get",
+		"request": {
+			"wareId": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"favoriteWares": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.ware",
+		"name": "RegionInfoGetRequest",
+		"method": "jingdong.regioninfo.get",
+		"request": {
+		}, 
+		"response": {
+			"regions": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.ware",
+		"name": "SkuJdPriceGetRequest",
+		"method": "jingdong.sku.jdprice.get",
+		"request": {
+			"skuId": "String", 
+			"webSite": "Integer", 
+			"origin": "Integer"
+		}, 
+		"response": {
+			"skuId": "String", 
+			"jdPrice": "String"
+		}
+	}, 
+	"api": {
+		"group": "website.ware",
+		"name": "WareGetRequest",
+		"method": "jingdong.ware.get",
+		"request": {
+			"wareId": "String", 
+			"regionId": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareModel": "Ware"
+		}
+	}, 
+	"api": {
+		"group": "website.ware",
+		"name": "WareSearchByCidRequst",
+		"method": "jingdong.wares.searchbycid",
+		"request": {
+			"cid": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareInfos": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "website.ware",
+		"name": "WareSearchRequst",
+		"method": "jingdong.wares.search",
+		"request": {
+			"cid": "String", 
+			"q": "String", 
+			"page": "String", 
+			"pageSize": "String", 
+			"fields": "String"
+		}, 
+		"response": {
+			"wareInfos": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsCarriersListRequest",
+		"method": "jingdong.logistics.carriers.list",
+		"request": {
+		}, 
+		"response": {
+			"carriersDetails": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOrderAddRequest",
+		"method": "jingdong.logistics.order.add",
+		"request": {
+			"channelsSellerNo": "String", 
+			"channelsOutboundNo": "String", 
+			"warehouseNo": "String", 
+			"carriersId": "String", 
+			"expectDate": "String", 
+			"orderNo": "String", 
+			"shopNo": "String", 
+			"consigneeName": "String", 
+			"addressProvince": "String", 
+			"addressCity": "String", 
+			"addressCounty": "String", 
+			"addressTown": "String", 
+			"address": "String", 
+			"zipCode": "String", 
+			"phone": "String", 
+			"mobile": "String", 
+			"receivable": "float", 
+			"email": "String", 
+			"buyerRemark": "String", 
+			"verifyRemark": "String", 
+			"returnConsigneeAddress": "String", 
+			"returnConsigneeName": "String", 
+			"returnConsigneePhone": "String", 
+			"stationNo": "String", 
+			"stationName": "String", 
+			"orderMark": "String", 
+			"shopOrderSource": "String", 
+			"shopOrderCreateTime": "Date", 
+			"picker": "String", 
+			"pickerCall": "String", 
+			"pikerId": "String", 
+			"packType": "String", 
+			"goodsNo": "String", 
+			"skuId": "String", 
+			"shopGoodsNo": "String", 
+			"qty": "String", 
+			"goodsStatus": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"resultNo": "String"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOrderDeleteRequest",
+		"method": "jingdong.logistics.order.delete",
+		"request": {
+			"receiptNo": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOrderGetRequest",
+		"method": "jingdong.logistics.order.get",
+		"request": {
+			"receiptNo": "String"
+		}, 
+		"response": {
+			"receiptNo": "String", 
+			"orderStatusDetails": [ "List" ], 
+			"orderPackageDetails": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOrderSearchRequest",
+		"method": "jingdong.logistics.order.search",
+		"request": {
+			"receiptNos": "String", 
+			"status": "String"
+		}, 
+		"response": {
+			"orders": "HashMap"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOtherInstoreAddRequest",
+		"method": "jingdong.logistics.otherInstore.add",
+		"request": {
+			"instoreType": "String", 
+			"poNo": "String", 
+			"expectedDate": "String", 
+			"approver": "String", 
+			"warehouseNo": "String", 
+			"goodsNo": "String", 
+			"isvGoodsNo": "String", 
+			"expectedQty": "String", 
+			"goodsStatus": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"resultNo": "String"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOtherInstoreQueryRequest",
+		"method": "jingdong.logistics.otherInstore.query",
+		"request": {
+			"inBoundNo": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"inboundNo": "String", 
+			"poNo": "String", 
+			"inboundStatus": "String", 
+			"statusUpdateTime": "Date", 
+			"taskDetails": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOtherOutstoreAddRequest",
+		"method": "jingdong.logistics.otherOutstore.add",
+		"request": {
+			"outboundNo": "String", 
+			"joslWareNo": "String", 
+			"joslCarriersNo": "String", 
+			"expectDate": "Date", 
+			"supplierName": "String", 
+			"supplierNo": "String", 
+			"approver": "String", 
+			"outboundType": "String", 
+			"remark": "String", 
+			"consigneeName": "String", 
+			"address": "String", 
+			"stationNo": "String", 
+			"stationName": "String", 
+			"receivable": "float", 
+			"zipCode": "String", 
+			"phone": "String", 
+			"mobile": "String", 
+			"email": "String", 
+			"buyerRemark": "String", 
+			"verifyRemark": "String", 
+			"returnConsigneeName": "String", 
+			"returnConsigneeAddress": "String", 
+			"returnConsigneeMobile": "String", 
+			"addressProvince": "String", 
+			"addressCity": "String", 
+			"addressCounty": "String", 
+			"addressTown": "String", 
+			"picker": "String", 
+			"pickerCell": "String", 
+			"pikerId": "String", 
+			"transportWay": "String", 
+			"orderMark": "String", 
+			"joslGoodNo": "String", 
+			"isvGoodNo": "String", 
+			"outQty": "String", 
+			"goodStatus": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"resultNo": "String"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOtherOutstoreQueryRequest",
+		"method": "jingdong.logistics.otherOutstore.query",
+		"request": {
+			"joslOutboundNo": "String"
+		}, 
+		"response": {
+			"processCode": "int", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"joslOutboundNo": "String", 
+			"isvOutboundNo": "String", 
+			"joslStatus": "String", 
+			"completeTime": "Date", 
+			"orderDetails": [ "List" ], 
+			"carriersId": "String", 
+			"carriersName": "String", 
+			"deliveryNoList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsOtherOutstoreQueryreturnbarcodeRequest",
+		"method": "jingdong.logistics.otherOutstore.queryreturnbarcode",
+		"request": {
+			"joslOutboundNo": "String"
+		}, 
+		"response": {
+			"processCode": "int", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"joslOutboundNo": "String", 
+			"isvOutboundNo": "String", 
+			"joslStatus": "String", 
+			"completeTime": "Date", 
+			"orderDetails": [ "List" ], 
+			"carriersId": "String", 
+			"carriersName": "String", 
+			"deliveryNoList": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsPoAddRequest",
+		"method": "jingdong.logistics.po.add",
+		"request": {
+			"channelsSellerNo": "String", 
+			"poNo": "String", 
+			"warehouseNo": "String", 
+			"expectDate": "String", 
+			"supplierName": "String", 
+			"supplierNo": "String", 
+			"approver": "String", 
+			"goodsNo": "String", 
+			"expectedQty": "String", 
+			"goodsStatus": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"resultNo": "String"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsPoGetRequest",
+		"method": "jingdong.logistics.po.get",
+		"request": {
+			"inboundNo": "String"
+		}, 
+		"response": {
+			"inboundNo": "String", 
+			"poNo": "String", 
+			"receivingStatus": "String", 
+			"taskDetails": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsPoGetreturnbacodeRequest",
+		"method": "jingdong.logistics.po.getreturnbacode",
+		"request": {
+			"inboundNo": "String"
+		}, 
+		"response": {
+			"inboundNo": "String", 
+			"poNo": "String", 
+			"receivingStatus": "String", 
+			"taskDetails": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsReturnorderAddRequest",
+		"method": "jingdong.logistics.returnorder.add",
+		"request": {
+			"sellerNo": "String", 
+			"warehouseNo": "String", 
+			"inboundNo": "String", 
+			"joslOutboundNo": "String", 
+			"expectedDate": "Date", 
+			"isvSource": "String", 
+			"approver": "String", 
+			"goodsNo": "String", 
+			"expectedQty": "String", 
+			"stockMark": "String"
+		}, 
+		"response": {
+			"processResult": "ProcessResult"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsReturnorderCancelRequest",
+		"method": "jingdong.logistics.returnorder.cancel",
+		"request": {
+			"receiptNo": "String"
+		}, 
+		"response": {
+			"processResult": "ProcessResult"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsReturnorderQueryRequest",
+		"method": "jingdong.logistics.returnorder.query",
+		"request": {
+			"receiptNo": "String"
+		}, 
+		"response": {
+			"responseReturnOrder": "ResponseReturnOrder"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsSkuAddRequest",
+		"method": "jingdong.logistics.sku.add",
+		"request": {
+			"barCode": "String", 
+			"skuId": "String", 
+			"name": "String", 
+			"goodsAbbreviation": "String", 
+			"categoryId": "String", 
+			"categoryName": "String", 
+			"brandNo": "String", 
+			"brandName": "String", 
+			"format": "String", 
+			"color": "String", 
+			"size": "String", 
+			"grossWeight": "float", 
+			"netWeight": "float", 
+			"sizeDefinition": "String", 
+			"suppliersName": "String", 
+			"manufacturer": "String", 
+			"suppliersNo": "String", 
+			"productArea": "String", 
+			"length": "float", 
+			"width": "float", 
+			"height": "float", 
+			"volume": "float", 
+			"isSafe": "int", 
+			"safeDate": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"resultNo": "String"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsSkuQueryRequest",
+		"method": "jingdong.logistics.sku.query",
+		"request": {
+			"joslGoodNo": "String", 
+			"isvGoodNo": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String", 
+			"resultNo": "String"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsSkuUpdateRequest",
+		"method": "jingdong.logistics.sku.update",
+		"request": {
+			"goodsNo": "String", 
+			"barCode": "String", 
+			"skuId": "String", 
+			"name": "String", 
+			"goodsAbbreviation": "String", 
+			"categoryId": "String", 
+			"categoryName": "String", 
+			"brandNo": "String", 
+			"brandName": "String", 
+			"format": "String", 
+			"color": "String", 
+			"size": "String", 
+			"grossWeight": "String", 
+			"netWeight": "String", 
+			"sizeDefinition": "String", 
+			"suppliersName": "String", 
+			"manufacturer": "String", 
+			"suppliersNo": "String", 
+			"productArea": "String", 
+			"length": "float", 
+			"width": "float", 
+			"height": "float", 
+			"volume": "float", 
+			"isSafe": "int", 
+			"safeDate": "String"
+		}, 
+		"response": {
+			"processCode": "long", 
+			"processStatus": "String", 
+			"errorMessage": "String"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsStockSearchRequest",
+		"method": "jingdong.logistics.stock.search",
+		"request": {
+			"warehouseNo": "String", 
+			"goodsNo": "String", 
+			"currentPage": "int"
+		}, 
+		"response": {
+			"stock": "ResponseStock"
+		}
+	}, 
+	"api": {
+		"group": "wms",
+		"name": "LogisticsWarehouseListRequest",
+		"method": "jingdong.logistics.warehouse.list",
+		"request": {
+		}, 
+		"response": {
+			"warehouseDetails": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "workorder",
+		"name": "RestWorkorderReplyRequest",
+		"method": "jingdong.rest.workorder.reply",
+		"request": {
+			"workId": "long", 
+			"replyContent": "String", 
+			"workType": "Long", 
+			"work2Type": "Long"
+		}, 
+		"response": {
+			"workOrder": "WorkOrderResponse"
+		}
+	}, 
+	"api": {
+		"group": "workorder",
+		"name": "WosSubbiztypelistGetRequest",
+		"method": "jingdong.wos.subbiztypelist.get",
+		"request": {
+			"biztypeId": "Long"
+		}, 
+		"response": {
+			"safBiztypeDtos": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "workorder",
+		"name": "WosWorkinfoGetRequest",
+		"method": "jingdong.wos.workinfo.get",
+		"request": {
+			"workId": "Long"
+		}, 
+		"response": {
+			"result": [ "List" ]
+		}
+	}, 
+	"api": {
+		"group": "workorder",
+		"name": "WosWorklistGetRequest",
+		"method": "jingdong.wos.worklist.get",
+		"request": {
+			"status": "Integer", 
+			"orderId": "Long", 
+			"beginDate": "Date", 
+			"endDate": "Date", 
+			"pageNumber": "int", 
+			"pageSize": "int"
+		}, 
+		"response": {
+			"page": "SafWorkPage"
+		}
+	}, 
+	"api": {
+		"group": "zhijian",
+		"name": "MarketServiceQtReportAddRequest",
+		"method": "jingdong.market.service.qt.report.add",
+		"request": {
+			"serviceItemCode": "String", 
+			"qtCode": "String", 
+			"qtName": "String", 
+			"qtType": "Integer", 
+			"qtStandard": "String", 
+			"isPassed": "Integer", 
+			"spName": "String", 
+			"message": "String", 
+			"submitTime": "String", 
+			"reportTime": "String", 
+			"expiryTime": "String", 
+			"itemUrl": "String", 
+			"itemDesc": "String", 
+			"reportUrl": "String", 
+			"extAttr": "String", 
+			"numIid": "Integer", 
+			"status": "Integer", 
+			"pin": "String"
+		}, 
+		"response": {
+			"publicResult": "AddResult"
+		}
+	}, 
+	"api": {
+		"group": "zhijian",
+		"name": "MarketServiceQtReportDeleteRequest",
+		"method": "jingdong.market.service.qt.report.delete",
+		"request": {
+			"qtCode": "String"
+		}, 
+		"response": {
+			"publicResult": "ReportDeleteResult"
+		}
+	}, 
+	"api": {
+		"group": "zhijian",
+		"name": "MarketServiceQtReportGetRequest",
+		"method": "jingdong.market.service.qt.report.get",
+		"request": {
+			"qtCode": "String"
+		}, 
+		"response": {
+			"publicResult": "GetResult"
+		}
+	}, 
+	"api": {
+		"group": "zhijian",
+		"name": "MarketServiceQtReportListGetRequest",
+		"method": "jingdong.market.service.qt.report.list.get",
+		"request": {
+			"serviceItemCode": "String", 
+			"qtType": "Integer", 
+			"spName": "String", 
+			"startTime": "String", 
+			"endTime": "String", 
+			"pin": "String"
+		}, 
+		"response": {
+			"publicResult": "ReportsResult"
+		}
+	}, 
+	"api": {
+		"group": "zhijian",
+		"name": "MarketServiceQtReportUpdateRequest",
+		"method": "jingdong.market.service.qt.report.update",
+		"request": {
+			"serviceItemCode": "String", 
+			"qtCode": "String", 
+			"qtName": "String", 
+			"qtType": "Integer", 
+			"qtStandard": "String", 
+			"isPassed": "Integer", 
+			"spName": "String", 
+			"message": "String", 
+			"submitTime": "String", 
+			"reportTime": "String", 
+			"expiryTime": "String", 
+			"itemUrl": "String", 
+			"itemDesc": "String", 
+			"reportUrl": "String", 
+			"extAttr": "String", 
+			"numIid": "Integer", 
+			"status": "Integer", 
+			"pin": "String"
+		}, 
+		"response": {
+			"publicResult": "UpdateResult"
+		}
+	}, 
+	"api": {
+		"group": "zhijian",
+		"name": "MarketServiceQtSubscribeGetRequest",
+		"method": "jingdong.market.service.qt.subscribe.get",
+		"request": {
+			"serviceItemCode": "String", 
+			"pin": "String"
+		}, 
+		"response": {
+			"qtArticleResult": "QtArticleResult"
+		}
+	}
+}

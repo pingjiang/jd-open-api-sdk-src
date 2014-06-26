@@ -1,0 +1,56 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   HostingdataJddpDataAddRequest.java
+
+package com.jd.open.api.sdk.request.udp;
+
+import com.jd.open.api.sdk.internal.util.JsonUtil;
+import com.jd.open.api.sdk.request.AbstractRequest;
+import com.jd.open.api.sdk.request.JdRequest;
+
+import java.io.IOException;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class HostingdataJddpDataAddRequest extends AbstractRequest
+        implements JdRequest {
+
+    public HostingdataJddpDataAddRequest() {
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setDataList(String dataList) {
+        this.dataList = dataList;
+    }
+
+    public String getDataList() {
+        return dataList;
+    }
+
+    public String getApiMethod() {
+        return "jingdong.hostingdata.jddp.data.add";
+    }
+
+    public String getAppJsonParams()
+            throws IOException {
+        Map pmap = new TreeMap();
+        pmap.put("tableName", tableName);
+        pmap.put("dataList", dataList);
+        return JsonUtil.toJson(pmap);
+    }
+
+    public Class getResponseClass() {
+        return com.jd.open.api.sdk.response.udp.HostingdataJddpDataAddResponse.class;
+    }
+
+    private String tableName;
+    private String dataList;
+}
